@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="ordenadores_memoriasram_action"
+                    name="Memorias RAM"
+                    res_model="ordenadores.memoriasram" />
+        <menuitem name="Componentes de Ordenador" id="menu_memorias" sequence="10" />
+        <menuitem id="ordenadores_memoriasram_menu"
+                  name="Memorias RAM"
+                  action="ordenadores_memoriasram_action"
+                  parent="menu_memorias"
+                  sequence="10" />
+        <record id="ordenadores_memoriasram_view_tree" model="ir.ui.view">
+            <field name="name">Lista de memorias RAM</field>
+            <field name="model">ordenadores.memoriasram</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="marca" />
+                    <field name="modelo" />
+                    <field name="especificaciones" />
+                    <field name="precio" />
+                    <field name="fabricante" />
+                    <field name="vendedor" />
+                </tree>
+            </field>
+        </record>
+        <record id="ordenadores_memoriasram_view_form" model="ir.ui.view">
+            <field name="name">Formulario de memorias RAM</field>
+            <field name="model">ordenadores.memoriasram</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="limpiar" type="object" string="Limpiar" class="oe_highlight" />
+                        <button name="limpia_todo" type="object" string="Limpiar todo" class="oe_highlight" />
+                    </header>
+                    <group>
+                        <field name="marca" />
+                        <field name="modelo" />
+                        <field name="especificaciones" />
+                        <field name="precio" />
+                        <field name="vendedor" />
+                        <field name="fabricante" />
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="ordenadores_memoriasram_view_search" model="ir.ui.view">
+            <field name="name">Busqueda de memorias RAM</field>
+            <field name="model">ordenadores.memoriasram</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="marca" />
+                    <field name="modelo" />
+                    <field name="especificaciones" />
+                    <field name="precio" />
+                    <field name="vendedor" />
+                    <field name="fabricante" />
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

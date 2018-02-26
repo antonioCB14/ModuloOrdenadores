@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="ordenadores_fabricante_action"
+                    name="Fabricante"
+                    res_model="ordenadores.fabricante" />
+        <menuitem name="Fabricantes"
+                  id="menu_fabricante"
+                  action="ordenadores_fabricante_action"
+                  parent="menu_memorias"
+                  sequence="17"/>
+        <record id="ordenadores_fabricantes_view_tree" model="ir.ui.view">
+            <field name="name">Lista de fabricantes</field>
+            <field name="model">ordenadores.fabricante</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="codigo" />
+                    <field name="nombre" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="ordenadores_fabricantes_view_form" model="ir.ui.view">
+            <field name="name">Formulario sobre fabricantes</field>
+            <field name="model">ordenadores.fabricante</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="codigo" />
+                        <field name="nombre" />
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="ordenadores_fabricantes_view_search" model="ir.ui.view">
+            <field name="name">Busqueda de fabricantes</field>
+            <field name="model">ordenadores.fabricante</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="codigo" />
+                    <field name="nombre" />
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

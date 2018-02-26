@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="ordenadores_vendedor_action"
+                    name="Vendedores"
+                    res_model="ordenadores.vendedor1" />
+        <menuitem name="Vendedores"
+                  id="menu_vendedor"
+                  action="ordenadores_vendedor_action"
+                  parent="menu_memorias"
+                  sequence="20"/>
+        <record id="ordenadores_vendedor_view_tree" model="ir.ui.view">
+            <field name="name">Lista vendedores</field>
+            <field name="model">ordenadores.vendedor1</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="fabricante" />
+                    <field name="vendedor" />
+                </tree>
+            </field>
+        </record>
+        <record id="ordenadores_vendedor_view_form" model="ir.ui.view">
+            <field name="name">Formulario sobre los vendedores</field>
+            <field name="model">ordenadores.vendedor1</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="limpiar" type="object" string="Limpia" class="oe_highlight" />
+                        <button name="limpia_todo" type="object" string="Limpia todo" class="oe_highlight" />
+                    </header>
+                    <group>
+                        <field name="vendedor" />
+                        <field name="fabricante" />
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record id="ordenadores_vendedor_view_search" model="ir.ui.view">
+            <field name="name">Busqueda de vendedores</field>
+            <field name="model">ordenadores.vendedor1</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="vendedor" />
+                    <field name="fabricante" />
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="ordenadores_placasbase_action"
+                    name="Placas base"
+                    res_model="ordenadores.placasbase" />
+        <menuitem id="ordenadores_placasbase_menu"
+                  name="Placas base"
+                  action="ordenadores_placasbase_action"
+                  parent="menu_memorias"
+                  sequence="11" />
+
+        <record id="ordenadores_placasbasee_view_tree" model="ir.ui.view">
+            <field name="name">Lista de placas base</field>
+            <field name="model">ordenadores.placasbase</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="marca" />
+                    <field name="modelo" />
+                    <field name="especificaciones" />
+                    <field name="precio" />
+                    <field name="fabricante" />
+                    <field name="vendedor" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="ordenadores_placasbasee_view_form" model="ir.ui.view">
+            <field name="name">Formulario de placas base</field>
+            <field name="model">ordenadores.placasbase</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="limpiar" type="object" string="Limpiar" class="oe_highlight" />
+                        <button name="limpia_todo" type="object" string="Limpiar todo" class="oe_highlight" />
+                    </header>
+                    <group>
+                        <field name="marca" />
+                        <field name="modelo" />
+                        <field name="especificaciones" />
+                        <field name="precio" />
+                        <field name="fabricante" />
+                        <field name="vendedor" />
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="ordenadores_placasbase_view_search" model="ir.ui.view">
+            <field name="name">Busqueda de placas base</field>
+            <field name="model">ordenadores.placasbase</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="marca" />
+                    <field name="modelo" />
+                    <field name="especificaciones" />
+                    <field name="precio" />
+                    <field name="fabricante" />
+                    <field name="vendedor" />
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

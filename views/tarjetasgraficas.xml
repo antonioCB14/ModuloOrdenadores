@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="ordenadores_tarjetasgraficas_action"
+                    name="Tarjetas graficas"
+                    res_model="ordenadores.tarjetasgraficas" />
+        <menuitem id="ordenadores_tarjetasgraficas_menu"
+                  name="Tarjetas graficas"
+                  action="ordenadores_tarjetasgraficas_action"
+                  parent="menu_memorias"
+                  sequence="13" />
+
+        <record id="ordenadores_tarjetasgraficas_view_tree" model="ir.ui.view">
+            <field name="name">Lista de tarjetas graficas</field>
+            <field name="model">ordenadores.tarjetasgraficas</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="marca" />
+                    <field name="modelo" />
+                    <field name="especificaciones" />
+                    <field name="precio" />
+                    <field name="fabricante" />
+                    <field name="vendedor" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="ordenadores_tarjetasgraficas_view_form" model="ir.ui.view">
+            <field name="name">Formulario de tarjetas graficas</field>
+            <field name="model">ordenadores.tarjetasgraficas</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="limpiar" type="object" string="Limpiar" class="oe_highlight" />
+                        <button name="limpia_todo" type="object" string="Limpiar todo" class="oe_highlight" />
+                    </header>
+                    <group>
+                        <field name="marca" />
+                        <field name="modelo" />
+                        <field name="especificaciones" />
+                        <field name="precio" />
+                        <field name="fabricante" />
+                        <field name="vendedor" />
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="ordenadores_tarjetasgraficas_view_search" model="ir.ui.view">
+            <field name="name">Busqueda de tarjetas graficas</field>
+            <field name="model">ordenadores.tarjetasgraficas</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="marca" />
+                    <field name="modelo" />
+                    <field name="especificaciones" />
+                    <field name="precio" />
+                    <field name="fabricante" />
+                    <field name="vendedor" />
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>
